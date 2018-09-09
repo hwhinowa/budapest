@@ -48,3 +48,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 추가 */
+html{
+	height:100%;
+	font-size:0.625rem;
+}
+body *{
+	box-sizing:border-box;
+	color:#333;
+}
+
+a{
+	text-decoration:none;
+}

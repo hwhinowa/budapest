@@ -1,6 +1,0 @@
-@charset "utf-8";
-
-.header_wrap li a{
-    writing-mode: vertical-lr;
-    text-orientation: sideways-right;
-}
