@@ -17,11 +17,11 @@ header{
     position:relative;
     font-family: 'Noto Serif JP', sans-serif;
     writing-mode: vertical-lr;
-    font-size:1.8rem;
+    font-size:1.6rem;
     font-weight:900;
     color:#763552;
     text-orientation: sideways-right;
-    padding:2rem;
+    padding:2rem 2.5rem 2rem 3rem;
 }
 .link_box span{
     position:absolute;
@@ -32,4 +32,14 @@ header{
     height:0.4rem;
     transform:rotate(90deg);
     background:#763552;
+}
+.copyright{
+    position:absolute;
+    top:0;
+    left:5rem;
+    height:100%;
+    writing-mode:vertical-rl;
+    text-orientation:upright;
+    padding:1rem;
+    background:green;
 }
