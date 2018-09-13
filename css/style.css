@@ -1,8 +1,21 @@
 @charset "utf-8";
 
 body *{
-    font-family:'Noto Serif KR', sans-serif;
+    /* font-family: 'Nanum Pen Script', cursive; */
+    font-family: 'Nanum Brush Script', cursive;
+    /* font-family:'Noto Serif KR', sans-serif; */
 }
+
+.clear_fix::after{
+    display:block;
+    content:'';
+    clear:both;
+}
+.fade_hide{
+    opacity:0;
+    transition:opacity 1s;
+}
+
 header{
     position:fixed;
     top:0;
@@ -19,11 +32,11 @@ header{
 .link_box{
     position:relative;
     writing-mode: vertical-lr;
-    font-size:1.6rem;
+    font-size:2.4rem;
     color:#763552;
     letter-spacing:-1px;
     text-orientation: sideways-right;
-    padding:2rem 2.5rem 2rem 3rem;
+    padding:2rem 3rem 2rem 2.5rem;
 }
 .link_box.on,
 .link_box:hover{
@@ -46,31 +59,77 @@ header{
 .copyright{
     position:absolute;
     top:0;
-    left:-3rem;
+    left:8rem;
     height:100%;
-    font-size:3.6rem;
-    font-weight:900;
+    /* font-size:4rem;
     color:#333;
-    letter-spacing:1px;
+    letter-spacing:-1px;
     line-height:150%;
     writing-mode:vertical-rl;
     text-orientation:upright;
-    padding:8rem 5rem 8.9rem;
-    background:#eee;
+    padding:6rem 5rem 0; */
+    border-right:solid 1px #aaa;
+    background:#ddd;
 }
 .copyright span{
     display:inline-block;
     width:4px;
     height:14px;
 }
+.copyright img{
+    display:inline-block;
+    width:3.4rem;
+    margin-top:-2rem;
+    border-radius:0.5rem;
+    opacity:0.8;
+}
 
 section{
-    float:right;
+    /* position:relative; */
+    /* float:right; */
+    width:100%;
     height:100%;
-    text-align:right;
+    /* text-align:right; */
+    background:url('../img/budapest2.jpg') 140% 50% no-repeat #f3a8ca;
+    background-size:90%;
 }
 section img{
     float:right;
     display:block;
     height:100%;
 }
+#intro{
+    position:absolute;
+    display:block;
+    width:100%;
+    z-index:99999;
+    transform:translateY(-94%);
+}
+
+.typing{
+    opacity:1;
+    overflow:hidden;
+    font-size:4rem;
+    color:#333;
+    letter-spacing:-8px;
+    line-height:150%;
+    writing-mode:vertical-rl;
+    text-orientation:upright;
+    padding:6rem 5rem 0;
+    white-space: nowrap;
+    /* animation-delay:10s; */
+    animation: 
+      typing 2.5s steps(30, end),
+      opacity 4s steps(20, end);
+      animation-delay:5.5s;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { height: 0 }
+    to { height: 100% }
+  }
+  @keyframes opacity {
+      from {opacity:0}
+      to {opacity:1}
+  }
