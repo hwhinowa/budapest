@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import './header.css';
+
+.staff_wrap,
+section{
+    height:100%;
+    background:#f3a8ca;
+}
+
+section{
+    box-sizing:border-box;
+    margin-left:28rem;
+    background:url('../img/staff_bg.jpg') no-repeat 0 40%;
+    background-size:contain;
+}
+.staff_thumbnail_box{}
+.staff_thumbnail_box li{}
+.staff_thumbnail_box li img{}

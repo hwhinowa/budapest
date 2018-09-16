@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import './header.css';
+
+.home_wrap,
+section{
+    height:100%;
+}
+section{
+    width:100%;
+    background:url('../img/budapest2.jpg') 140% 50% no-repeat #f3a8ca;
+    background-size:90%;
+}
+section img{
+    float:right;
+    display:block;
+    height:100%;
+}
+#intro{
+    position:absolute;
+    display:block;
+    width:100%;
+    z-index:99999;
+    transform:translateY(-94%);
+}

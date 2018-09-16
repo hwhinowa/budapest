@@ -19,20 +19,38 @@ body *{
 header{
     position:fixed;
     top:0;
-    left:0;
+    left:-30rem;
     height:100%;
 }
+header.show{
+    left:0;
+    transition:left 1s ease-out;
+}
+.staff_wrap header{
+    left:0;
+}
+
 .header_wrap{
     height:100%;
     padding-top:10rem;
+    margin-left:-10rem;
     transform:rotate(180deg);
+    
     background:#f76eab;
 }
-.header_wrap li{}
+.header_wrap.show{
+    margin-left:0;
+    transition:margin-left 1.2s ease-out;
+}
+.staff_wrap .header_wrap{
+    margin-left:0;
+}
+
 .link_box{
     position:relative;
     writing-mode: vertical-lr;
-    font-size:2.4rem;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:1.6rem;
     color:#763552;
     letter-spacing:-1px;
     text-orientation: sideways-right;
@@ -40,12 +58,12 @@ header{
 }
 .link_box.on,
 .link_box:hover{
-    font-weight:900;
+    color:#4a323d;
 }
 .link_box span{
     position:absolute;
     top:50%;
-    left:-0.3rem;
+    left:-0.7rem;
     display:none;
     width:1rem;
     height:0.4rem;
@@ -59,17 +77,10 @@ header{
 .copyright{
     position:absolute;
     top:0;
-    left:8rem;
+    left:7.6rem;
     height:100%;
-    /* font-size:4rem;
-    color:#333;
-    letter-spacing:-1px;
-    line-height:150%;
-    writing-mode:vertical-rl;
-    text-orientation:upright;
-    padding:6rem 5rem 0; */
     border-right:solid 1px #aaa;
-    background:#ddd;
+    background:#eee;
 }
 .copyright span{
     display:inline-block;
@@ -84,52 +95,34 @@ header{
     opacity:0.8;
 }
 
-section{
-    /* position:relative; */
-    /* float:right; */
-    width:100%;
-    height:100%;
-    /* text-align:right; */
-    background:url('../img/budapest2.jpg') 140% 50% no-repeat #f3a8ca;
-    background-size:90%;
-}
-section img{
-    float:right;
-    display:block;
-    height:100%;
-}
-#intro{
-    position:absolute;
-    display:block;
-    width:100%;
-    z-index:99999;
-    transform:translateY(-94%);
-}
-
 .typing{
     opacity:1;
     overflow:hidden;
     font-size:4rem;
     color:#333;
     letter-spacing:-8px;
-    line-height:150%;
+    line-height:130%;
     writing-mode:vertical-rl;
     text-orientation:upright;
     padding:6rem 5rem 0;
     white-space: nowrap;
-    /* animation-delay:10s; */
     animation: 
-      typing 2.5s steps(30, end),
-      opacity 4s steps(20, end);
-      animation-delay:5.5s;
-  }
+        typing 3s,
+        opacity 4s steps(20, end);
+    animation-delay:5.5s;
+}
+.staff_wrap .typing{
+    opacity:0;
+    animation:opacity 2s steps(30, end);
+    animation-delay:none;
+}
   
-  /* The typing effect */
-  @keyframes typing {
+/* The typing effect */
+@keyframes typing {
     from { height: 0 }
     to { height: 100% }
-  }
-  @keyframes opacity {
-      from {opacity:0}
-      to {opacity:1}
-  }
+}
+@keyframes opacity {
+    from {opacity:0}
+    to {opacity:1}
+}
