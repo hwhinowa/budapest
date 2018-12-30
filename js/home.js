@@ -1,19 +1,22 @@
 // 'use strict';
 
-let intro = document.getElementById('intro');
-let header = document.getElementsByTagName('header')[0];
-let menu_box = document.getElementsByClassName('header_wrap')[0];
-let typing = document.getElementsByClassName('typing')[0];
+let intro_box = document.querySelector('.video_wrap');
+let intro = document.querySelector('#intro');
+let header = document.querySelector('header');
+let section = document.querySelector('section');
+let menu_box = document.querySelector('.header_wrap');
+let typing = document.querySelector('.typing');
 
 intro.onended = function(){
-    intro.classList.add('fade_hide');
+    intro_box.classList.add('fade_hide');
     setTimeout(function(){
         show();
-    },500);
+    });
 }
 
 function show(){
-    intro.style.display = 'none';
+    intro_box.style.display = 'none';
+    section.classList.add('active');
     header.classList.add('show');
     menu_box.classList.add('show');
 }

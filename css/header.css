@@ -1,19 +1,25 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'BMYEONSUNG';
+    font-style: normal;
+    font-weight: 400;
+    src:local('BMYEONSUNG'),
+        url('../font/BMYEONSUNG.woff2') format('woff2'), 
+        url('../font/BMYEONSUNG.woff') format('woff'),
+        url('../font/BMYEONSUNG.ttf') format('truetype'),
+        url('../font/BMYEONSUNG.eot') format('embedded-opentype');
+}
+
 body *{
-    /* font-family: 'Nanum Pen Script', cursive; */
-    font-family: 'Nanum Brush Script', cursive;
-    /* font-family:'Noto Serif KR', sans-serif; */
+    font-family:'BMYEONSUNG';
+    /* font-family: 'Nanum Brush Script', cursive; */
 }
 
 .clear_fix::after{
     display:block;
     content:'';
     clear:both;
-}
-.fade_hide{
-    opacity:0;
-    transition:opacity 1s;
 }
 
 header{
@@ -24,7 +30,7 @@ header{
 }
 header.show{
     left:0;
-    transition:left 1s ease-out;
+    transition:left 2s ease-out;
 }
 .staff_wrap header{
     left:0;
@@ -40,7 +46,7 @@ header.show{
 }
 .header_wrap.show{
     margin-left:0;
-    transition:margin-left 1.2s ease-out;
+    transition:margin-left 2.5s ease-out;
 }
 .staff_wrap .header_wrap{
     margin-left:0;
@@ -108,7 +114,7 @@ header.show{
     white-space: nowrap;
     animation: 
         typing 3s,
-        opacity 4s steps(20, end);
+        opacity 5s steps(20, end);
     animation-delay:5.5s;
 }
 .staff_wrap .typing{
@@ -116,6 +122,17 @@ header.show{
     animation:opacity 2s steps(30, end);
     animation-delay:none;
 }
+
+
+/* SECTION */
+section{
+    opacity:0;
+}
+section.active{
+    opacity:1;
+    transition:opacity 0.5s;
+}
+
   
 /* The typing effect */
 @keyframes typing {

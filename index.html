@@ -7,6 +7,7 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>Grand Budapest Hotel</title>
 
+    <link rel='icon' type='image/png' href='./img/favicon.png'>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet"> -->
@@ -45,13 +46,18 @@
                     <img src='./img/budapest_logo.jpg' alt=' '>
                 </div>
             </div>
+            <!-- <? include './html/head.html' ?> -->
+            <!--#include file='./html/head.html'-->
+            <!-- <object name="foo" type="text/html" data="./html/head.html"></object> -->
         </header>
         <section>
             <!-- <img src='./img/budapest2.jpg' alt='The Grand Budapest Hotel'> -->
         </section>
-        <video id='intro' width='100%' autoplay muted>
-            <source src='./video/clip.mp4' type='video/mp4'>
-        </video>
+        <div class='video_wrap'>
+            <video id='intro' autoplay muted>
+                <source src='./video/clip.mp4' type='video/mp4'>
+            </video>
+        </div>
     </div>
 
     <script src='./js/home.js'></script>
